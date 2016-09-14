@@ -1,0 +1,22 @@
+/* ===========================================================================*\
+    BASE STYLES
+\* ===========================================================================*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* for rem sizing */
+}
+
+body {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+p {
+  font-size: 1.4rem;
+}

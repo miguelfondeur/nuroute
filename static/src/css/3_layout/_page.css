@@ -1,0 +1,14 @@
+/*------------------------------------*\
+  PAGE STYLES
+\*------------------------------------*/
+
+.page {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(100% - 280px);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}

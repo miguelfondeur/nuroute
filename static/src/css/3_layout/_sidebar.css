@@ -1,0 +1,12 @@
+/*------------------------------------*\
+  SIDEBAR
+\*------------------------------------*/
+
+.sidebar {
+  width: 280px;
+  background-color: #ddd;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

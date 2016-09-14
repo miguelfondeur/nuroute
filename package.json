@@ -17,7 +17,12 @@
   },
   "homepage": "https://github.com/miguelfondeur/nuroute#readme",
   "devDependencies": {
+    "cssnano": "^3.7.4",
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0"
+    "gulp-concat": "^2.6.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-import": "^8.1.2"
   }
 }
