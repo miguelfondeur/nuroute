@@ -1,0 +1,4 @@
+STATE RULES
+
+Use JQuery to add or remove a 'state' rather than add styles. States should be
+prefixed with 'is', ex(.is-open, .is-closed, is-hidden). 
