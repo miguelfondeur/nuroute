@@ -1,36 +1,33 @@
-'use strict';
+'use strict'
 
-//Dependencies
-var gulp   = require('gulp'),
-  concat   = require('gulp-concat'),
-  rename   = require('gulp-rename'),
-  postcss  = require('gulp-postcss'),
-  cssnext  = require('postcss-cssnext'),
-  atImport = require('postcss-import'),
-  cssnano  = require('cssnano');
+// Dependencies
+var gulp = require('gulp')
+var rename = require('gulp-rename')
+var postcss = require('gulp-postcss')
+var cssnext = require('postcss-cssnext')
+var atImport = require('postcss-import')
+var cssnano = require('cssnano')
 
+// Environments
+var src = './static/src/'
+var dist = './static/dist/'
 
-//Environments
-var src   = './static/src/',
-    dist  = './static/dist/';
+// TASKS
 
-
-//Tasks
-
-//CSS
-gulp.task('css', function() {
+// CSS
+gulp.task('css', function () {
   var processors = [
     cssnext({ browsers: 'last 2 versions' }),
     atImport,
     cssnano
-  ];
+  ]
   return gulp.src(src + 'css/src.css')
-    .pipe( postcss(processors) )
+    .pipe(postcss(processors))
     .pipe(rename('nuroute.css'))
-    .pipe(gulp.dest(dist + 'css') )
-});
+    .pipe(gulp.dest(dist + 'css'))
+})
 
-//Default
-gulp.task('default', function() {
-  gulp.watch(src + 'css/**/*.css', ['css']);
-});
+// Default
+gulp.task('default', function () {
+  gulp.watch(src + 'css/**/*.css', ['css'])
+})
