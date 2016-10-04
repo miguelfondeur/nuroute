@@ -48,13 +48,57 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
-	var MyTitle = __webpack_require__(172);
 
-	var div = React.DOM.div;
+	var App = function App() {
+	  return React.createElement(
+	    'div',
+	    { className: 'wrapper' },
+	    React.createElement('div', { className: 'sidebar' }),
+	    React.createElement(
+	      'div',
+	      { className: 'page' },
+	      React.createElement(
+	        'header',
+	        { className: 'l-header' },
+	        React.createElement(
+	          'nav',
+	          { className: 'site-nav' },
+	          React.createElement(
+	            'div',
+	            { className: 'site-logo' },
+	            'nuroute'
+	          ),
+	          React.createElement(
+	            'ul',
+	            null,
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(
+	                'a',
+	                null,
+	                'Sign Up'
+	              )
+	            ),
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(
+	                'a',
+	                null,
+	                'Log In'
+	              )
+	            )
+	          )
+	        )
+	      ),
+	      React.createElement('main', { className: 'l-content' }),
+	      React.createElement('footer', { className: 'l-footer' })
+	    )
+	  );
+	};
 
-	var MyFirstComponent = div(null, React.createElement(MyTitle, { title: 'This is a Prop!' }), React.createElement(MyTitle, { title: 'This is a Prop Brop!' }));
-
-	ReactDOM.render(MyFirstComponent, document.getElementById('app'));
+	ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -21457,25 +21501,6 @@
 
 	module.exports = ReactDOMNullInputValuePropHook;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ },
-/* 172 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	var div = React.DOM.div;
-	var h1 = React.DOM.h1;
-
-	var MyTitle = React.createClass({
-	  displayName: 'MyTitle',
-	  render: function render() {
-	    return div(null, h1(null, this.props.title));
-	  }
-	});
-
-	module.exports = MyTitle;
 
 /***/ }
 /******/ ]);

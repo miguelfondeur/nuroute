@@ -1,4 +1,4 @@
-public/*bundle.js
+static/dist/js/bundle.js
 node_modules/
 .eslintcache
 coverage
