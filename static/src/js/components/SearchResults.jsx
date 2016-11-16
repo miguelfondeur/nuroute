@@ -4,8 +4,8 @@ const data = require('../dummy-data/searchResults')
 
 const SearchResults = () => (
   <div className='container'>
-    {data.searchResults.map((show) => (
-      <ShowCard {...show} key={show.ID} />
+    {data.cards.map((card) => (
+      <ShowCard {...card} key={card.ID} />
     ))}
   </div>
 )

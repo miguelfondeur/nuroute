@@ -1,3 +1,7 @@
+.site-logo {
+  font-family: var(--nuroute);
+}
+
 .l-header {
   flex: 0 0 auto;
   background-color: #ccc;
@@ -8,15 +12,22 @@
   flex: 1 1 auto;
   position: relative;
   overflow-y: scroll;
-
-  padding: 0 30px;
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
 }
 
 .l-footer {
   flex: 0 0 auto;
   background-color: #ccc;
   min-height: 60px;
+}
+
+.search-bar {
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-container {
+  padding: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }

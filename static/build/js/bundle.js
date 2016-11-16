@@ -52,7 +52,9 @@
 
 	var Landing = __webpack_require__(172);
 	var Layout = __webpack_require__(173);
-	var SearchResults = __webpack_require__(237);
+	var SearchResults = __webpack_require__(238);
+	var Store = __webpack_require__(241);
+	var Office = __webpack_require__(242);
 
 	var _require = __webpack_require__(174);
 
@@ -61,19 +63,40 @@
 	var IndexRoute = _require.IndexRoute;
 	var hashHistory = _require.hashHistory;
 
+	var _require2 = __webpack_require__(240);
 
-	var AppWrapper = function AppWrapper() {
-	  return React.createElement(
-	    Router,
-	    { history: hashHistory },
-	    React.createElement(
-	      Route,
-	      { path: '/', component: Layout },
-	      React.createElement(IndexRoute, { component: Landing }),
-	      React.createElement(Route, { path: '/results', component: SearchResults })
-	    )
-	  );
-	};
+	var cards = _require2.cards;
+
+
+	var AppWrapper = React.createClass({
+	  displayName: 'AppWrapper',
+	  assignCard: function assignCard(nextState, replace) {
+	    var cardArray = cards.filter(function (card) {
+	      return card.ID === nextState.params.id;
+	    });
+
+	    if (cardArray.length < 1) {
+	      return replace('/');
+	    }
+
+	    Object.assign(nextState.params, cardArray[0]);
+	    return nextState;
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      Router,
+	      { history: hashHistory },
+	      React.createElement(
+	        Route,
+	        { path: '/', component: Layout },
+	        React.createElement(IndexRoute, { component: Landing }),
+	        React.createElement(Route, { path: '/results', component: SearchResults }),
+	        React.createElement(Route, { path: '/store/:id', component: Store, onEnter: this.assignCard }),
+	        React.createElement(Route, { path: '/office/:id', component: Office })
+	      )
+	    );
+	  }
+	});
 
 	ReactDOM.render(React.createElement(AppWrapper, null), document.getElementById('app'));
 
@@ -21490,7 +21513,7 @@
 	var Landing = function Landing() {
 	  return React.createElement(
 	    'div',
-	    null,
+	    { className: 'home-info' },
 	    React.createElement(
 	      'h1',
 	      null,
@@ -21518,64 +21541,39 @@
 
 	var Link = _require.Link;
 
+	var Header = __webpack_require__(237);
 
 	var Layout = function Layout(props) {
 	  return React.createElement(
 	    'div',
 	    { className: 'wrapper' },
-	    React.createElement(
-	      'header',
-	      { className: 'l-header' },
-	      React.createElement(
-	        'nav',
-	        { className: 'site-nav' },
-	        React.createElement(
-	          'div',
-	          { className: 'site-logo' },
-	          'nuroute'
-	        ),
-	        React.createElement(
-	          'ul',
-	          null,
-	          React.createElement(
-	            'li',
-	            null,
-	            React.createElement(
-	              'a',
-	              null,
-	              'Sign Up'
-	            )
-	          ),
-	          React.createElement(
-	            'li',
-	            null,
-	            React.createElement(
-	              'a',
-	              null,
-	              'Log In'
-	            )
-	          )
-	        )
-	      )
-	    ),
+	    React.createElement(Header, null),
 	    React.createElement('div', { className: 'sidebar' }),
 	    React.createElement(
 	      'div',
 	      { className: 'page' },
 	      React.createElement(
 	        'div',
-	        { className: 'searchBar' },
-	        React.createElement('input', { type: 'text', placeholder: 'Search For Anything' }),
+	        { className: 'search-bar' },
 	        React.createElement(
-	          Link,
-	          { to: '/results', className: 'search-nuroute' },
-	          'Browse Nuroute'
+	          'div',
+	          { className: 'content-container' },
+	          React.createElement('input', { type: 'text', placeholder: 'Search For Anything' }),
+	          React.createElement(
+	            Link,
+	            { to: '/results', className: 'search-nuroute' },
+	            'Browse Nuroute'
+	          )
 	        )
 	      ),
 	      React.createElement(
 	        'main',
 	        { className: 'l-content' },
-	        props.children
+	        React.createElement(
+	          'div',
+	          { className: 'content-container' },
+	          props.children
+	        )
 	      ),
 	      React.createElement('footer', { className: 'l-footer' })
 	    )
@@ -27519,18 +27517,74 @@
 
 	'use strict';
 
+	var React = __webpack_require__(1);
+
+	var _require = __webpack_require__(174);
+
+	var Link = _require.Link;
+
+
+	var Header = React.createClass({
+	  displayName: 'Header',
+	  render: function render() {
+	    return React.createElement(
+	      'header',
+	      { className: 'l-header' },
+	      React.createElement(
+	        'nav',
+	        { className: 'site-nav' },
+	        React.createElement(
+	          Link,
+	          { to: '/', className: 'site-logo' },
+	          'nuroute'
+	        ),
+	        React.createElement(
+	          'ul',
+	          null,
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              'a',
+	              null,
+	              'Sign Up'
+	            )
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              'a',
+	              null,
+	              'Log In'
+	            )
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Header;
+
+/***/ },
+/* 238 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var ShowCard = __webpack_require__(238);
-	var data = __webpack_require__(239);
+	var ShowCard = __webpack_require__(239);
+	var data = __webpack_require__(240);
 
 	var SearchResults = function SearchResults() {
 	  return React.createElement(
 	    'div',
 	    { className: 'container' },
-	    data.searchResults.map(function (show) {
-	      return React.createElement(ShowCard, _extends({}, show, { key: show.ID }));
+	    data.cards.map(function (card) {
+	      return React.createElement(ShowCard, _extends({}, card, { key: card.ID }));
 	    })
 	  );
 	};
@@ -27538,7 +27592,7 @@
 	module.exports = SearchResults;
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27585,11 +27639,11 @@
 	module.exports = ShowCard;
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports) {
 
 	module.exports = {
-		"searchResults": [
+		"cards": [
 			{
 				"ID": "1",
 				"name": "Miguel Fondeur",
@@ -27627,6 +27681,104 @@
 			}
 		]
 	};
+
+/***/ },
+/* 241 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(1);
+
+	var Store = function (_React$Component) {
+	  _inherits(Store, _React$Component);
+
+	  function Store() {
+	    _classCallCheck(this, Store);
+
+	    return _possibleConstructorReturn(this, (Store.__proto__ || Object.getPrototypeOf(Store)).apply(this, arguments));
+	  }
+
+	  _createClass(Store, [{
+	    key: 'render',
+	    value: function render() {
+	      var params = this.props.params || {};
+	      var name = params.name;
+	      var profession = params.profession;
+	      var city = params.city;
+	      var state = params.state;
+
+	      return React.createElement(
+	        'div',
+	        { className: 'card-full' },
+	        React.createElement(
+	          'h1',
+	          null,
+	          name
+	        ),
+	        React.createElement(
+	          'p',
+	          null,
+	          profession
+	        ),
+	        React.createElement(
+	          'p',
+	          null,
+	          city
+	        ),
+	        React.createElement(
+	          'p',
+	          null,
+	          state
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Store;
+	}(React.Component);
+
+	var object = React.PropTypes.object;
+
+
+	Store.propTypes = {
+	  params: object.isRequired
+	};
+
+	module.exports = Store;
+
+/***/ },
+/* 242 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Office = React.createClass({
+	  displayName: 'Office',
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      { className: 'card-full' },
+	      React.createElement(
+	        'h1',
+	        null,
+	        'Full Card'
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Office;
 
 /***/ }
 /******/ ]);

@@ -1,26 +1,22 @@
 const React = require('react')
 const { Link } = require('react-router')
+const Header = require('./Header')
 
 const Layout = (props) => (
-
   <div className='wrapper'>
-    <header className='l-header'>
-      <nav className='site-nav'>
-        <div className='site-logo'>nuroute</div>
-        <ul>
-          <li><a>Sign Up</a></li>
-          <li><a>Log In</a></li>
-        </ul>
-      </nav>
-    </header>
+    <Header />
     <div className='sidebar' />
     <div className='page'>
-      <div className='searchBar'>
-        <input type='text' placeholder='Search For Anything' />
-        <Link to='/results' className='search-nuroute'>Browse Nuroute</Link>
+      <div className='search-bar'>
+        <div className='content-container'>
+          <input type='text' placeholder='Search For Anything' />
+          <Link to='/results' className='search-nuroute'>Browse Nuroute</Link>
+        </div>
       </div>
       <main className='l-content'>
-        {props.children}
+        <div className='content-container'>
+          {props.children}
+        </div>
       </main>
       <footer className='l-footer' />
     </div>
