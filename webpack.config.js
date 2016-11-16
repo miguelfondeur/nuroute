@@ -1,10 +1,14 @@
 
 module.exports = {
-  entry: ,
+  context: __dirname,
+  entry: './static/src/index.jsx',
 
   output: {
-    path: 'build/js',
+    path: path.join(__dirname, './static/build/js'),
     filename: 'bundle.js'
+  },
+   resolve: {
+    extensions: ['', '.js', '.jsx', '.json']
   },
 
   module: {
@@ -22,13 +26,3 @@ module.exports = {
   }
 
 };
-
-  // context: __dirname,
-  // entry: './static/src/js/index.jsx',
-  // output: {
-  //   path: path.join(__dirname, './static/dist/js'),
-  //   filename: 'bundle.js'
-  // },
-  // resolve: {
-  //   extensions: ['', '.js', '.jsx', '.json']
-  // },
