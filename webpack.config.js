@@ -16,11 +16,17 @@ module.exports = {
     chunks: false
   },
   module: {
+    preloaders: [
+      {
+        test: /\.jsx$/,
+        loaders: "eslint-loader",
+        exclude: /node_modules/
+      }
+    ],
     loaders: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: ['react-hot', 'babel-loader']
+        test: /\.jsx$/,
+        loaders: ['babel-loader']
       }
     ]
   }

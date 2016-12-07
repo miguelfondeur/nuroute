@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, hashHistory } from 'react-router'
 
-import Landing from './components/Landing/Landing'
+import Landing from '././containers/'
 
 import 'app.css'
 
