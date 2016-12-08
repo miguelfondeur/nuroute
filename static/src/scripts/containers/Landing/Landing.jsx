@@ -2,7 +2,7 @@
 import React from 'react'
 
 // CSS
-import 'landing.css'
+import './landing.css'
 
 const Landing = () => (
   <div className='landing'>
