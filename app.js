@@ -1,18 +1,18 @@
 // change this file
-'use strict'
+'use strict';
 
-const express = require('express')
-const port = 3000
+const express = require('express');
+const port = 3000;
 
-const app = express()
+const app = express();
 
 app.get('/', function (req, res) {
-  res.send('<h1>WOW!</h1>')
-})
+  res.send('<h1>WOW!</h1>');
+});
 
 app.listen(port, function () {
-  console.log('The frontend server is running on port 3000')
-})
+  console.log('The frontend server is running on port 3000');
+});
 
 // require('babel-register')
 

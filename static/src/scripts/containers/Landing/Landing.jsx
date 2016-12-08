@@ -1,8 +1,8 @@
 // Libs
-import React from 'react'
+import React from 'react';
 
 // CSS
-import './landing.css'
+import './landing.css';
 
 const Landing = () => (
   <div className='landing'>
@@ -12,7 +12,7 @@ const Landing = () => (
       <button className='browse-all'>or Brouse All</button>
     </div>
   </div>
-)
+);
 
 // Export
-module.exports = Landing
+module.exports = Landing;
