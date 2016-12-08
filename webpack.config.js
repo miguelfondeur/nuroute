@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: './static/src/scripts/containers/App/App.jsx',
+  entry: './static/src/scripts/containers/app/App.jsx',
   output: {
     path: path.join(__dirname, './static/public/js'),
     filename: 'bundle.js'
@@ -26,11 +26,11 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx$/,
-        loaders: ['babel-loader']
+        loader: 'babel-loader'
       },
       {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   }
