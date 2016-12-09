@@ -2,15 +2,20 @@
 import React from 'react';
 
 // Components
-import searchResults from '../../mochs/searchResults.json';
+const Card = require('../card/Card');
+
+// Data
+import data from '../../mochs/data.json';
 
 // CSS
 import './search.css';
 
 const Search = () => (
-  <pre><code>
-    {JSON.stringify(searchResults, null, 4)}
-  </code></pre>
+  <div className='container'>
+    {data.cards.map((card) => (
+      <Card {...card} key={card.ID} />
+    ))}
+  </div>
 );
 
 module.exports = Search;

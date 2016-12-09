@@ -17,3 +17,4 @@ const Landing = () => (
 
 // Export
 module.exports = Landing;
+
