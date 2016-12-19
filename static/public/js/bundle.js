@@ -68,7 +68,9 @@
 
 	var _Layout2 = _interopRequireDefault(_Layout);
 
-	__webpack_require__(248);
+	var _App = __webpack_require__(248);
+
+	var _App2 = _interopRequireDefault(_App);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26396,14 +26398,16 @@
 
 	var _reactRouter = __webpack_require__(178);
 
-	__webpack_require__(234);
+	var _Landing = __webpack_require__(234);
+
+	var _Landing2 = _interopRequireDefault(_Landing);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Landing = function Landing() {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'landing' },
+	    { className: _Landing2.default.landing },
 	    _react2.default.createElement(
 	      'div',
 	      { className: 'home-info' },
@@ -26445,8 +26449,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js?modules&importLoaders=1!./../../../../../node_modules/postcss-loader/index.js!./landing.css", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js?modules&importLoaders=1!./../../../../../node_modules/postcss-loader/index.js!./landing.css");
+			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!./Landing.css", function() {
+				var newContent = require("!!./../../../../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!./Landing.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -26464,10 +26468,12 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "/* ===========================================================================*\\\n    Landing Container\n\\* ===========================================================================*/\n\n.Landing__landing___3GPC7 {\n    background: -webkit-linear-gradient(aqua, lightgreen);\n    background: linear-gradient(aqua, lightgreen); \n}", ""]);
 
 	// exports
-
+	exports.locals = {
+		"landing": "Landing__landing___3GPC7"
+	};
 
 /***/ },
 /* 236 */
@@ -26879,8 +26885,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js?modules&importLoaders=1!./../../../../../node_modules/postcss-loader/index.js!./search.css", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js?modules&importLoaders=1!./../../../../../node_modules/postcss-loader/index.js!./search.css");
+			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!./Search.css", function() {
+				var newContent = require("!!./../../../../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!./Search.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -26913,7 +26919,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(243);
+	var _Card = __webpack_require__(243);
+
+	var _Card2 = _interopRequireDefault(_Card);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26980,8 +26988,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js?modules&importLoaders=1!./../../../../../node_modules/postcss-loader/index.js!./card.css", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js?modules&importLoaders=1!./../../../../../node_modules/postcss-loader/index.js!./card.css");
+			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!./Card.css", function() {
+				var newContent = require("!!./../../../../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!./Card.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27014,7 +27022,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(246);
+	var _Layout = __webpack_require__(246);
+
+	var _Layout2 = _interopRequireDefault(_Layout);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27022,7 +27032,7 @@
 	var Layout = function Layout(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'app-conatainer' },
+	    { className: _Layout2.default.wrapper },
 	    props.children
 	  );
 	};
@@ -27053,8 +27063,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js?modules&importLoaders=1!./../../../../../node_modules/postcss-loader/index.js!./layout.css", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js?modules&importLoaders=1!./../../../../../node_modules/postcss-loader/index.js!./layout.css");
+			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!./Layout.css", function() {
+				var newContent = require("!!./../../../../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!./Layout.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27072,10 +27082,12 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".Layout__wrapper___1BU1n {\n    width: 100%;\n    height: 100vh;\n    margin: 0 auto;\n}\n\n", ""]);
 
 	// exports
-
+	exports.locals = {
+		"wrapper": "Layout__wrapper___1BU1n"
+	};
 
 /***/ },
 /* 248 */
@@ -27093,8 +27105,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js?modules&importLoaders=1!./../../../../../node_modules/postcss-loader/index.js!./app.css", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js?modules&importLoaders=1!./../../../../../node_modules/postcss-loader/index.js!./app.css");
+			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!./App.css", function() {
+				var newContent = require("!!./../../../../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!./App.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});

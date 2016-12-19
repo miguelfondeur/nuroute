@@ -8,7 +8,7 @@ const Card = require('../card/Card');
 import data from '../../mochs/data.json';
 
 // CSS
-import './search.css';
+import './Search.css';
 
 const Search = () => (
   <div className='container'>

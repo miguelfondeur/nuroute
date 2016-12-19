@@ -2,7 +2,7 @@
 import React from 'react';
 
 // CSS
-import './card.css';
+import styles from './Card.css';
 
 const Card = (props) => (
   <div className='card'>

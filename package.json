@@ -33,6 +33,7 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-react": "^6.8.0",
     "eslint-plugin-standard": "^2.0.1",
+    "gulp": "^3.9.1",
     "json-loader": "^0.5.4",
     "postcss-cssnext": "^2.9.0",
     "postcss-loader": "^1.1.1",

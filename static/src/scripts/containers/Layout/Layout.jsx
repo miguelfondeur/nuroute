@@ -2,10 +2,10 @@
 import React from 'react';
 
 // CSS
-import './layout.css';
+import styles from './Layout.css';
 
 const Layout = (props) => (
-  <div className='app-conatainer'>
+  <div className={styles.wrapper}>
     {props.children}
   </div>
 );

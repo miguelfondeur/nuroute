@@ -9,7 +9,7 @@ import Search from '../../containers/search/Search.jsx';
 import Layout from '../../containers/layout/Layout.jsx';
 
 // CSS
-import './app.css';
+import styles from './App.css';
 
 const App = () => (
   <Router history={hashHistory}>

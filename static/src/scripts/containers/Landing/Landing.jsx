@@ -3,10 +3,10 @@ import React from 'react';
 import { Link } from 'react-router';
 
 // CSS
-import './landing.css';
+import styles from './Landing.css';
 
 const Landing = () => (
-  <div className='landing'>
+  <div className={styles.landing}>
     <div className='home-info'>
       <h1>Do What you Love</h1>
       <input className='search' type='text' placeholder='Search' />

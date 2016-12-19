@@ -1,7 +1,0 @@
-COMPONENT STYLE RULES
-
-Components:
-- Contain Content
-- Are the majority of your site
-- Each Module is an interface
-- Isolate one from another (prevent styles from going in or out)
