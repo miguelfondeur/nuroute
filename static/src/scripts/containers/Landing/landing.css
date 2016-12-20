@@ -4,4 +4,7 @@
 
 .landing {
     background: linear-gradient(aqua, lightgreen); 
+    height: 100vh;
+    color: white;
+    padding: 30px;
 }
