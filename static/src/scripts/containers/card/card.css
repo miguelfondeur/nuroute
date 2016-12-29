@@ -1,0 +1,11 @@
+.card {
+    width: calc(33.333% - 30px);
+    display: inline-block;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    margin: 30px 30px 0px 0px;
+    font-family: tahoma;
+    color: #888;
+}

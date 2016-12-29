@@ -5,19 +5,19 @@ import React from 'react';
 import styles from './Card.css';
 
 const Card = (props) => (
-  <div className='card'>
-    <h2 className='card-name'>{props.name}</h2>
+  <div className={styles.card}>
+    <h2 >{props.name}</h2>
     <h3 className='card-profession'>{props.profession}</h3>
     <p className='card-location'>
       <span>{props.city}</span> |
-            <span> {props.state}</span>
+      <span> {props.state}</span>
     </p>
   </div>
 );
 
 const { string } = React.PropTypes;
 
-Card.proptypes = {
+Card.propTypes = {
   name: string.isRequired,
   profession: string.isRequired,
   city: string.isRequired,
