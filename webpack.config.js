@@ -1,16 +1,19 @@
-const path = require('path');
+const {resolve} = require('path');
 const webpackValidator = require('webpack-validator');
-// const merge = require('webpack-merge');
+const {getIfUtils} = require('webpack-config-utils');
 
-module.exports = () => {
+module.exports = env => {
+  const {ifProd, ifNotProd} = getIfUtils(env);
   return webpackValidator({
-
-    context: __dirname,
-    entry: './static/src/scripts/containers/app/App.jsx',
+    context: resolve('static/src'),
+    entry: './scripts/containers/app/App.jsx',
     output: {
-      path: path.join(__dirname, './static/public/js'),
-      filename: 'bundle.js'
+      path: resolve('static/public/js'),
+      filename: 'bundle.js',
+      publicPath: '/.static/public/js/',
+      pathinfo: ifNotProd()
     },
+    devtool: ifProd('source-map', 'eval'),
     resolve: {
       extensions: ['.js', '.jsx', '.json']
     },
@@ -30,7 +33,10 @@ module.exports = () => {
       loaders: [
         {
           test: /\.jsx$/,
-          loader: 'babel-loader'
+          loaders: [
+            'eslint-loader', 
+            'babel-loader'],
+          exclude: /node_modules/
         },
         {
           test: /\.json$/,

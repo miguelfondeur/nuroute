@@ -5,9 +5,9 @@ import React from 'react';
 import styles from './Avatar.css';
 
 const Avatar = () => (
-	<div className={styles.avatar}>
-		<img src="" />
-	</div>
+  <div className={styles.avatar}>
+    <img src='' />
+  </div>
 );
 
 // Export

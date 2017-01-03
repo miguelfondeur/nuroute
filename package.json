@@ -4,10 +4,13 @@
   "description": "service network",
   "main": "index.js",
   "scripts": {
+    "prebuild": "rimraf static/public",
+    "build": "webpack -p --env.prod",
+    "prebuild:dev": "rimraf static/public",
+    "build:dev": "webpack --env.dev",
     "start": "http-server --silent",
-    "build:dev": "webpack",
-    "dev": "webpack-dev-server",
-    "validate": "semistandard"
+    "dev": "webpack-dev-server --env.dev",
+    "lint": "semistandard"
   },
   "repository": {
     "type": "git",
@@ -42,11 +45,12 @@
     "postcss-loader": "^1.1.1",
     "postcss-smart-import": "^0.5.1",
     "react-hot-loader": "^3.0.0-beta.6",
+    "rimraf": "^2.5.4",
     "semistandard": "^9.2.1",
     "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.28",
+    "webpack-config-utils": "^2.3.0",
     "webpack-dev-server": "^2.1.0-beta.0",
-    "webpack-merge": "^1.1.2",
     "webpack-validator": "^2.3.0"
   },
   "dependencies": {
