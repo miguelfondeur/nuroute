@@ -3,8 +3,9 @@
 \* ===========================================================================*/
 
 .landing {
-    background: linear-gradient(aqua, lightgreen); 
+    background: linear-gradient(#08A2C0, #0EB583); 
     height: 100vh;
     color: white;
     padding: 30px;
+
 }

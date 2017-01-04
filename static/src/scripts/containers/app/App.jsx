@@ -8,8 +8,8 @@ import Landing from '../../containers/landing/Landing.jsx';
 import Search from '../../containers/search/Search.jsx';
 import Layout from '../../containers/layout/Layout.jsx';
 
-// CSS
-// import styles from './App.css';
+// Global Styles
+require('../../../global-styles/global.css');
 
 const App = () => (
   <Router history={hashHistory}>
@@ -20,4 +20,4 @@ const App = () => (
   </Router>
 );
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render (<App />, document.getElementById('root'));

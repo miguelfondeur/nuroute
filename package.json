@@ -50,7 +50,7 @@
     "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.28",
     "webpack-config-utils": "^2.3.0",
-    "webpack-dev-server": "^2.1.0-beta.0",
+    "webpack-dev-server": "^2.2.0-rc.0",
     "webpack-validator": "^2.3.0"
   },
   "dependencies": {
