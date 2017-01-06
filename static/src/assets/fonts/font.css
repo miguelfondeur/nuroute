@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'MODERNA';
+  src: url('MODERNA.eot');
+  src: url('MODERNA.woff2') format('woff2'),
+       url('MODERNA.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Moderna';
+  src: url('Moderna.woff') format('woff'),
+       url('Moderna.ttf') format('truetype'),
+       url('Moderna.svg#Moderna') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
