@@ -36,6 +36,7 @@ module.exports = env => {
           test: /\.json$/,
           loader: 'json-loader'
         },
+        // style loader
         {
           test: /\.css$/,
           loader: ExtractTextPlugin.extract({
@@ -43,6 +44,7 @@ module.exports = env => {
             loader: 'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
           })
         },
+        //font loader
         {
           test: /\.(eot|svg|ttf|woff|woff2)$/,
           loader: 'file?name=public/fonts/[name].[ext]'
