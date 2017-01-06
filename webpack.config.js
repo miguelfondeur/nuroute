@@ -1,5 +1,5 @@
-const {resolve} = require('path');
 const webpackValidator = require('webpack-validator');
+const {resolve} = require('path');
 const {getIfUtils} = require('webpack-config-utils');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -42,6 +42,10 @@ module.exports = env => {
             fallbackLoader: 'style-loader',
             loader: 'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
           })
+        },
+        {
+          test: /\.(eot|svg|ttf|woff|woff2)$/,
+          loader: 'file?name=public/fonts/[name].[ext]'
         }
       ]
     },

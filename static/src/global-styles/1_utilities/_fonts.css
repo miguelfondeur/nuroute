@@ -2,7 +2,8 @@
     FONTS
 \* ===========================================================================*/
 
-/*@font-face {
+@font-face {
     font-family: moderna;
-    src: url(../../../assets/fonts/MODERNA_.TTF);
-}*/
+    src: url(MODERNA.ttf);
+    font-weight: bold;
+}
